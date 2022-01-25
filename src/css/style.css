@@ -1,8 +1,17 @@
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 
 .container {
     position: relative;
@@ -13,22 +22,46 @@
  /* PROMO  */
 
 .promo {
+    position: relative;
     height: 100%;
-    background:url('../img/bg/main_bg.jpg ') center  center / cover no-repeat;
+    background:url('../img/bg/main3_bg.jpg ') center  center / cover no-repeat;
     padding: 38px 0 61px 0;
+   
 
 }
+.promo::after {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: #000;
+    opacity: .6;
+   
+}
+
+.container__block__element {
+    position: relative;
+    z-index: 1;
+}
+/* .logo {
+    position: relative;
+    z-index: 1;
+} */
 
 .logo .logo__img {
     display: block;
     margin: 0 auto;
+    width: 83px;
+    height: 71px;
+    
+  
 }
 
 .logo .logo__text {
-    color: #FFFFFF;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
+    color: #2798B9;
+    font-weight: 400;
     font-size: 15px;
     text-align: center;
     text-transform: uppercase;
@@ -37,14 +70,12 @@
 
 h1 {
     margin-top: 53px;
+   
 }
 
 .title {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 900;
     font-size: 41px;
-    /* line-height: 24px; */
     text-align: center;
     text-transform: uppercase;
     color:#F9BF3B;
@@ -56,11 +87,8 @@ h2.title {
 
 .simple .title__big {
     margin-top: 25px;
-    font-family: Roboto-Black;
-    font-style: normal;
     font-weight: 900;
     font-size: 80px;
-    /* line-height: 24px; */
     text-align: center;
     text-transform: uppercase;
     color:#fff;
@@ -70,8 +98,6 @@ h2.title {
     margin-top: 22.5px;
     padding: 0 15px;
     color:#FFFFFF;
-    font-family: Roboto-ligth;
-    font-style: normal;
     font-weight: 300;
     font-size: 21px;
     line-height: 28px;
@@ -81,15 +107,14 @@ h2.title {
 
 .promo .promo__text span.free {
     color:#F9BF3B;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 21px;
-    /* line-height: 28px; */
+    
 }
 
 .promo .promo__btn,
 .present .present__btn {
+  
     display: block;
     margin: 0 auto;
     margin-top: 73px;
@@ -101,7 +126,8 @@ h2.title {
     border:4px solid rgba(0, 0, 0, 0.23);
     box-shadow: 0  0  0 rgba(0, 0, 0, 0.18);
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.23);
-    font-family: RobotoCondensed;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
     font-size: 19px;
     text-align: center;
     text-transform: uppercase;
@@ -116,8 +142,8 @@ h2.title {
 
 .promo .more__text {
     color: #FFFFFF;
-    font-family: Roboto;
     font-size: 15px;
+    font-weight: 100;
     margin-top: 70px;
     text-align: center;
     text-transform: uppercase;
@@ -138,9 +164,9 @@ h2.title {
     padding: 88px 0 75px;
 }
 
-.waiting .waiting__header {
-    font-family: Roboto;
-    font-weight: normal;
+.waiting .waiting__header,
+.ending__header {
+    font-weight: 400;
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -148,7 +174,12 @@ h2.title {
 
 }
 
-.waiting .waiting__divaider {
+.ending__header {
+    color:#fff;
+}
+
+.waiting .waiting__divaider,
+.ending__divaider {
     width: 220px;
     height: 7px;
     background: #F9BF3B;
@@ -157,9 +188,8 @@ h2.title {
 }
 
 .waiting .waiting__subtext {
-    font-family: Roboto;
     text-align: center;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 23px;
     color:#4A4A4A;
     margin-top: 18px;
@@ -183,7 +213,6 @@ h2.title {
 }
 .waiting .waiting_wrapper .waiting__item .waiting_descr {
     margin-top: 26px;
-    font-family: Roboto;
     font-weight: 300;
     font-size: 15px;
     line-height: 21px;
@@ -200,12 +229,9 @@ h2.title {
 }
 
 .optimization__header {
-   
     margin-left: 391px;
-    font-family: Roboto;
     font-weight: 400;
     font-size: 29px;
-    
     text-transform: uppercase;
     color:#299CBD;
     z-index: 5;
@@ -217,8 +243,6 @@ h2.title {
     margin-top: 25px;
     margin-left: 389px;
     width: 750px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 27px;
@@ -247,24 +271,7 @@ h2.title {
     padding: 86px 0 68.5px;
 }
 
-.ending .ending__header {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #EFEFEF;
-}
 
-.ending .ending__divaider {
-    width: 220px;
-    height: 7px;
-    background: #F9BF3B;
-    margin: 0 auto;
-    margin-top: 18px;
-}
 
 .ending .ending__wrapper {
     display: flex;
@@ -292,8 +299,6 @@ h2.title {
 
 .ending .ending__wrapper .ending__item .ending__descr {
     margin-top: 24.5px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 17px;
     line-height: 20px;
@@ -315,11 +320,8 @@ h2.title {
 }
 
 .present .present__wrapper .present__descr {
-    
     margin-top: 45px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 30px;
     line-height: 43px;
     text-align: center;
@@ -340,9 +342,7 @@ h2.title {
 
 .webinar .webinar__wrapper .webinar__suptitle {
     margin-top: 36px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -352,8 +352,6 @@ h2.title {
 
 .webinar .webinar__wrapper .webinar__title {
     margin-top: 30px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 900;
     font-size: 36px;
     text-align: center;
@@ -363,9 +361,7 @@ h2.title {
 
 .webinar .webinar__wrapper .webinar__subtitle {
     margin-top: 24.5px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 23px;
     text-align: center;
     color: #4A4A4A;
@@ -381,8 +377,6 @@ h2.title {
 
 .footer .footer_text {
     /* margin-top: 55px; */
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 15px;
     line-height: 21px;
